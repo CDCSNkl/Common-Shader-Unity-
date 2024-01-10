@@ -29,7 +29,6 @@ public class VOLight : ScriptableRendererFeature
         public float maxDistance, intensity;
         public int steps;
         public Color mainColor;
-        public RenderPassEvent renderPassEvent;
 
         public float RandRange;
         private Matrix4x4 frustumCorners = Matrix4x4.identity;
@@ -51,7 +50,7 @@ public class VOLight : ScriptableRendererFeature
             CommandBuffer cmd = CommandBufferPool.Get("VO_Pass");
 
             Camera camera = Camera.main;
-            //»ñÈ¡ÉãÏñ»ú
+            //Â»Ã±ÃˆÂ¡Ã‰Ã£ÃÃ±Â»Ãº
             Transform cameraTransform = camera.transform;
             //RandomSeed
             float ram = Random.Range(-300f, 300f);
